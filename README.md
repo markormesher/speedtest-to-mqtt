@@ -12,7 +12,8 @@ A simple utility image to monitor your internet speeds via [speedtest-cli](https
 
 All arguments are required if they do not have a default value listed below.
 
-- `MQTT_HOST` - must include the `mqtt://...` prefix and any non-default port number.
+- `MQTT_HOST` - MQTT host, which must **not** include the `mqtt://...` prefix.
+- `MQTT_PORT` - MQTT port (default: 1883)
 - `MQTT_TOPIC_PREFIX` - MQTT topic prefix (default: `speedtest/state`).
 - `INTERVAL` - how often, in seconds, to repeat the test (default: 3600).
 
@@ -39,7 +40,5 @@ services:
   speedtest-to-mqtt:
     image: ghcr.io/markormesher/speedtest-to-mqtt
     environment:
-      - MQTT_HOST=mqtt://my-mqtt-host
-      - TOPIC_PREFIX=speedtest/state
-      - INTERVAL=3600
+      - MQTT_HOST=my-mqtt-host
 ```
