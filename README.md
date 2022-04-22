@@ -36,6 +36,8 @@ ${prefix}/journey_${rowNum}/upload_speed (unit: Bps)
 ## Quick-Start Docker-Compose Example
 
 ```yaml
+version: "3.8"
+
 services:
   speedtest-to-mqtt:
     image: ghcr.io/markormesher/speedtest-to-mqtt:VERSION
