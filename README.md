@@ -38,7 +38,7 @@ ${prefix}/journey_${rowNum}/upload_speed (unit: Bps)
 ```yaml
 services:
   speedtest-to-mqtt:
-    image: ghcr.io/markormesher/speedtest-to-mqtt
+    image: ghcr.io/markormesher/speedtest-to-mqtt:VERSION
     environment:
       - MQTT_HOST=my-mqtt-host
 ```
