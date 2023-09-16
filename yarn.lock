@@ -70,10 +70,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@markormesher/x-to-mqtt@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@markormesher/x-to-mqtt/-/x-to-mqtt-0.1.4.tgz#dc999412404835a316b8f652e47fdb054e72d0cb"
-  integrity sha512-mskhu6Gp2CRBKMWEKlKQbWc0AUxSY0ZCmtmJVfy5mUwX20Wp4jqt470jaYwtLLn6MTWhDeE1k4/H/+7Yy0cNQA==
+"@markormesher/x-to-mqtt@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@markormesher/x-to-mqtt/-/x-to-mqtt-0.1.5.tgz#c2bd6607588fa30a30c4a211204f9cf1b0bc511b"
+  integrity sha512-cyOMgweMJ5Oq96XjzkJhiib86ucE2mSKAf1ghhAWoh1tgtTSaPwHyYtX7vpIh7bnKNYX1sknof+u95o5leGYdQ==
   dependencies:
     mqtt "^5.0.5"
 
