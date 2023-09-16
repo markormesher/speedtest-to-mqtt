@@ -4,11 +4,11 @@
 
 A simple utility image to monitor your Internet speeds via [Speedtest.net](https://speedtest.net) and publish them to MQTT.
 
-:whale: See releases on [ghcr.io](https://ghcr.io/markormesher/speedtest-to-mqtt).
+:package: See container versions on [ghcr.io](https://ghcr.io/markormesher/speedtest-to-mqtt).
 
 ## Configuration
 
-:point_right: See this project's base library, [X to MQTT](https://github.com/markormesher/x-to-mqtt) for configuration reference.
+:point_right: See this project's base library, [X to MQTT](https://github.com/markormesher/x-to-mqtt), for configuration reference.
 
 The default update interval is 3600 seconds (1 hour), which is also the minimum interval that can be set to avoid spamming the upstream service.
 
