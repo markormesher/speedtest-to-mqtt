@@ -52,7 +52,8 @@ jobs:
     steps:
       - setup_remote_docker:
           docker_layer_caching: true
-          version: 20.10.12
+      - attach_workspace:
+          at: .
       - run:
           name: Build Docker image
           command: |
