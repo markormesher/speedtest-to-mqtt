@@ -10,7 +10,7 @@
     "start": "node build/index.js"
   },
   "dependencies": {
-    "@markormesher/x-to-mqtt": "^0.1.5",
+    "@markormesher/x-to-mqtt": "^0.1.6",
     "speedtest-net": "^2.2.0"
   },
   "devDependencies": {
