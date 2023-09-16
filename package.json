@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "speedtest-to-mqtt",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "repository": "git@github.com:markormesher/speedtest-to-mqtt.git",
   "license": "AGPL-3.0",
   "scripts": {
