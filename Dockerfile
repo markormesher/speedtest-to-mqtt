@@ -1,6 +1,26 @@
-FROM python:alpine3.15
-WORKDIR /speedtest-to-mqtt
-RUN pip3 install speedtest-cli
-RUN apk add --no-cache mosquitto-clients jq bash
-COPY ./run-test.sh ./
-CMD ./run-test.sh
+FROM node:20.6.1-bookworm AS builder
+RUN apt update && apt install -y --no-install-recommends python3 && apt clean
+
+WORKDIR /app
+
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
+
+COPY ./src ./src
+COPY ./tsconfig.json ./
+
+RUN yarn build
+
+# ---
+
+FROM node:20.6.1-bookworm
+RUN apt update && apt install -y --no-install-recommends python3 && apt clean
+
+WORKDIR /app
+
+COPY package.json yarn.lock ./
+RUN yarn install --production --frozen-lockfile && yarn cache clean
+
+COPY --from=builder /app/build /app/build
+
+CMD yarn start

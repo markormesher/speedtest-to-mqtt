@@ -1,44 +1,22 @@
-![CircleCI](https://img.shields.io/circleci/build/github/markormesher/speedtest-to-mqtt)
+[![CircleCI](https://img.shields.io/circleci/build/github/markormesher/speedtest-to-mqtt)](https://app.circleci.com/pipelines/github/markormesher/speedtest-to-mqtt)
 
-# speedtest-to-mqtt
+# Speedtest to MQTT
 
-A simple utility image to monitor your internet speeds via [speedtest-cli](https://pypi.org/project/speedtest-cli/).
-
-:rocket: Jump to [quick-start example](#quick-start-docker-compose-example).
+A simple utility image to monitor your Internet speeds via [Speedtest.net](https://speedtest.net) and publish them to MQTT.
 
 :whale: See releases on [ghcr.io](https://ghcr.io/markormesher/speedtest-to-mqtt).
 
-## Configuration via Environment Variables
+## Configuration
 
-All arguments are required if they do not have a default value listed below.
+:point_right: See this project's base library, [X to MQTT](https://github.com/markormesher/x-to-mqtt) for configuration reference.
 
-- `MQTT_HOST` - MQTT host, which must **not** include the `mqtt://...` prefix.
-- `MQTT_PORT` - MQTT port (default: 1883)
-- `MQTT_TOPIC_PREFIX` - MQTT topic prefix (default: `speedtest/state`).
-- `INTERVAL` - how often, in seconds, to repeat the test (default: 3600).
+The default update interval is 3600 seconds (1 hour), which is also the minimum interval that can be set to avoid spamming the upstream service.
 
-## MQTT Topics and Messages
+## MQTT Topics
 
-### System Information
+- `${prefix}/ping_latency` - ping latency in milliseconds
+- `${prefix}/ping_jitter` - ping jitter in milliseconds
+- `${prefix}/download_speed` - download bandwidth in Bps
+- `${prefix}/upload_speed` - upload bandwidth in Bps
 
-```
-${prefix}/last_seen = ISO datetime string of the last time journeys were published
-```
-
-### Speed Information
-
-```
-${prefix}/journey_${rowNum}/ping_latency (unit: ms)
-${prefix}/journey_${rowNum}/download_speed (unit: Bps)
-${prefix}/journey_${rowNum}/upload_speed (unit: Bps)
-```
-
-## Quick-Start Docker-Compose Example
-
-```yaml
-services:
-  speedtest-to-mqtt:
-    image: ghcr.io/markormesher/speedtest-to-mqtt:VERSION
-    environment:
-      - MQTT_HOST=my-mqtt-host
-```
+:point_right: See [X to MQTT](https://github.com/markormesher/x-to-mqtt) for other topics used for meta-results, like the upstream service status.
