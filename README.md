@@ -13,9 +13,9 @@ The default update interval is 3600 seconds (1 hour), which is also the minimum 
 
 ## MQTT Topics
 
-- `${prefix}/ping_latency` - ping latency in milliseconds
-- `${prefix}/ping_jitter` - ping jitter in milliseconds
-- `${prefix}/download_speed` - download bandwidth in Bps
-- `${prefix}/upload_speed` - upload bandwidth in Bps
+- `${prefix}/state/ping_latency` - ping latency in milliseconds
+- `${prefix}/state/ping_jitter` - ping jitter in milliseconds
+- `${prefix}/state/download_speed` - download bandwidth in Bps
+- `${prefix}/state/upload_speed` - upload bandwidth in Bps
 
-:point_right: See [X to MQTT](https://github.com/markormesher/x-to-mqtt) for other topics used for meta-results, like the upstream service status.
+:point_right: See [X to MQTT](https://github.com/markormesher/x-to-mqtt) for other values published under the `${prefix}/_meta` topic, like the upstream service status.

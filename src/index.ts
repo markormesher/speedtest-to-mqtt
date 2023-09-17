@@ -9,10 +9,10 @@ registerRepeatingUpdate({ runImmediately: true, defaultIntervalSeconds: 3600, mi
     .then((result) => {
       logger.info("Speed test finished");
       mqttWrapper.updateUpstreamStatus("okay");
-      mqttWrapper.publish("ping_latency", result.ping.latency);
-      mqttWrapper.publish("ping_jitter", result.ping.jitter);
-      mqttWrapper.publish("download_speed", result.download.bandwidth);
-      mqttWrapper.publish("upload_speed", result.upload.bandwidth);
+      mqttWrapper.publish("state/ping_latency", result.ping.latency);
+      mqttWrapper.publish("state/ping_jitter", result.ping.jitter);
+      mqttWrapper.publish("state/download_speed", result.download.bandwidth);
+      mqttWrapper.publish("state/upload_speed", result.upload.bandwidth);
     })
     .catch((error) => {
       console.log(error);
