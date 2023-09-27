@@ -144,14 +144,14 @@
   integrity sha512-7aqorHYgdNO4DM36stTiGO3DvKoex9TQRwsJU6vMaFGyqpBA1MNZkz+PG3gaNUPpTAOYhT1WR7M1JyA3fbS9Cw==
 
 "@types/speedtest-net@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@types/speedtest-net/-/speedtest-net-2.1.1.tgz#a77fa5bb348c1f9047d2a88968a17c94e72d30ed"
-  integrity sha512-gjURChbOBF/X2XAFeiAi7q757A/Hal8+mzmt/n6tDvkexLBAasZhCpDcY3A9y5OKSwkLt1QWlhq7iX4h3vBQ1g==
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@types/speedtest-net/-/speedtest-net-2.1.2.tgz#74f6eda21beb039a3fb3ba0dc5a1087c58088610"
+  integrity sha512-elVlbcFxhnx7kCe8evG4R+IiEqha3Uj0eNxSKtpIdreYAJZ+BVqnCFXnPiRavF/VbPrnx1vhDmeNzIzIt3QDvg==
 
 "@types/ws@^8.5.5":
-  version "8.5.5"
-  resolved "https://registry.yarnpkg.com/@types/ws/-/ws-8.5.5.tgz#af587964aa06682702ee6dcbc7be41a80e4b28eb"
-  integrity sha512-lwhs8hktwxSjf9UaZ9tG5M03PGogvFaH8gUgLNbN9HKIg0dvv6q+gkSuJ8HN4/VbyxkuLzCjlN7GquQ0gUJfIg==
+  version "8.5.6"
+  resolved "https://registry.yarnpkg.com/@types/ws/-/ws-8.5.6.tgz#e9ad51f0ab79b9110c50916c9fcbddc36d373065"
+  integrity sha512-8B5EO9jLVCy+B58PLHvLDuOD8DRVMgQzq8d55SjLCOn9kqGyqOvy27exVaTio1q1nX5zLu8/6N0n2ThSxOM6tg==
   dependencies:
     "@types/node" "*"
 
