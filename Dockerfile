@@ -1,4 +1,4 @@
-FROM node:20.7.0-bookworm@sha256:191b360003a7458df0f14bbc0aa1d298a706e32786e1830191036971eb1547a2 AS builder
+FROM node:20.8.0-bookworm@sha256:6b3f9aa7eefa8d4c93d43914e78aa2bfea9a12808b0059e5da78854dfa8b8768 AS builder
 RUN apt update && apt install -y --no-install-recommends python3 && apt clean
 
 WORKDIR /app
@@ -13,7 +13,7 @@ RUN yarn build
 
 # ---
 
-FROM node:20.7.0-bookworm@sha256:191b360003a7458df0f14bbc0aa1d298a706e32786e1830191036971eb1547a2
+FROM node:20.8.0-bookworm@sha256:6b3f9aa7eefa8d4c93d43914e78aa2bfea9a12808b0059e5da78854dfa8b8768
 RUN apt update && apt install -y --no-install-recommends python3 && apt clean
 
 WORKDIR /app
