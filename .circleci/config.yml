@@ -2,9 +2,9 @@ version: 2
 
 defaults: &defaults
   working_directory: ~/app
+  resource_class: small
   docker:
     - image: cimg/node:20.9.0
-  resource_class: small
 
 jobs:
   setup:
@@ -17,7 +17,7 @@ jobs:
             - yarn-v1
       - run:
           name: Install dependencies
-          command: yarn install
+          command: yarn install --immutable
       - save_cache:
           key: yarn-v1-{{ .Branch }}-{{ epoch }}
           paths:
@@ -35,6 +35,7 @@ jobs:
       - run:
           name: Lint
           command: |
+            yarn dedupe -c
             yarn lint
 
   build:
