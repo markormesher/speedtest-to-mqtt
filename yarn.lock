@@ -255,9 +255,9 @@ __metadata:
   linkType: hard
 
 "@types/speedtest-net@npm:^2.1.1":
-  version: 2.1.4
-  resolution: "@types/speedtest-net@npm:2.1.4"
-  checksum: c1b8a344fbf33f26d78175e6d2011620bd6d628ef763bf5b468ea5bcc8116fd6ab17d6d12f84281f11ce8226a68b1fabce2aa4a0b7291a3a9c384ee316b651c2
+  version: 2.1.5
+  resolution: "@types/speedtest-net@npm:2.1.5"
+  checksum: 3bd161eeebabb3a657690a8beb966b13c076e1eb2e3e5c1cb490274bdf46293e187cbbef8013fb24b1f5d45d345a2d77c476bd2a7ff950765f8f350aade08efd
   languageName: node
   linkType: hard
 
