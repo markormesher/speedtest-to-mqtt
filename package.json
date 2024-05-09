@@ -16,7 +16,7 @@
   "devDependencies": {
     "@markormesher/eslint-config": "^0.0.4",
     "@types/speedtest-net": "^2.1.1",
-    "eslint": "^8.49.0",
+    "eslint": "^9.0.0",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   },
