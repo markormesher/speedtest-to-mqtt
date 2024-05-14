@@ -1,4 +1,4 @@
-FROM node:21.7.3-bookworm@sha256:bda531283f4bafd1cb41294493de89ae3c4cf55933da14710e46df970e77365e AS builder
+FROM node:21.7.3-bookworm@sha256:64f5f12ea1ae509f7d114b089325fa6521e151a9437dd1e1ff943a111823569d AS builder
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ RUN yarn build
 
 # ---
 
-FROM node:21.7.3-bookworm@sha256:bda531283f4bafd1cb41294493de89ae3c4cf55933da14710e46df970e77365e
+FROM node:21.7.3-bookworm@sha256:64f5f12ea1ae509f7d114b089325fa6521e151a9437dd1e1ff943a111823569d
 
 WORKDIR /app
 
