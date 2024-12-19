@@ -14,7 +14,7 @@
     "speedtest-net": "^2.2.0"
   },
   "devDependencies": {
-    "@markormesher/eslint-config": "^0.0.4",
+    "@markormesher/eslint-config": "^0.1.0",
     "@types/speedtest-net": "^2.1.1",
     "eslint": "^8.49.0",
     "prettier": "^3.0.3",
